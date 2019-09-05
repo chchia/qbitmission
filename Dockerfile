@@ -25,7 +25,7 @@ RUN	cd /usr/lib/go/src/github.com/h31/Reflection/; \
 	apk del --purge \
 	build-dependencies
 
-FROM linuxserver/qbittorrent
+FROM caoli5288/qbittorrent-nox
 COPY services.d /etc/services.d
 COPY --from=builder /tmp/main /tmp/main
 RUN chmod +x /tmp/main
